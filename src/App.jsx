@@ -1,0 +1,21 @@
+import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router';
+import Home from './pages/Home';
+import ErrorPage from './pages/ErrorPage';
+import Navbar from './components/Navbar';
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" Component={ErrorPage} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
