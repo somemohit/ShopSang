@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="*" Component={ErrorPage} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
